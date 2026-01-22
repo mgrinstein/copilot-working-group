@@ -87,6 +87,11 @@
   width: 100%;
 }
 
+.actionsContent button {
+  flex: 1;
+  min-width: 0;
+}
+
 @media (max-width: 640px) {
   .actionsContent {
     flex-direction: column;

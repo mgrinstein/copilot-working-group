@@ -53,7 +53,7 @@ export const ProductCard = ({ product }: ProductCardProps) => {
           <div className={isLowStock ? styles.lowStock : styles.stock}>
             {isLowStock ? `Only ${product.stock} left!` : 'In Stock'}
           </div>
-          <Button fullWidth onClick={() => addToCart(product)}>
+          <Button onClick={() => addToCart(product)}>
             Add to Cart
           </Button>
         </div>

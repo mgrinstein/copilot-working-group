@@ -1,12 +1,13 @@
 import { describe, it, expect, vi } from 'vitest';
 import { render, screen } from '@testing-library/react';
+import React from 'react';
 import { ProductCard } from '../index';
 import type { Product } from '../../../types/product';
 
 // Mock the router
 vi.mock('@tanstack/react-router', () => ({
-  Link: ({ children, to, params, className }: any) => (
-    <a href={to} className={className}>
+  Link: ({ children, className }: { children: React.ReactNode; to: string; params?: Record<string, string>; className?: string }) => (
+    <a href="#" className={className}>
       {children}
     </a>
   ),
