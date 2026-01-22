@@ -7,7 +7,7 @@ export const ProductImage = () => {
   return (
     <div className={styles.imageSection}>
       <img
-        src={product?.images[0] || product?.thumbnail}
+        src={product?.images?.[0] || product?.thumbnail}
         alt={product?.title}
         className={styles.image}
       />
