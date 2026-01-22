@@ -46,16 +46,17 @@ export const ProductCard = ({ product }: ProductCardProps) => {
         <div className={styles.priceSection}>
           <Card.Price>${product.price.toFixed(2)}</Card.Price>
         </div>
-
-        <div className={isLowStock ? styles.lowStock : styles.stock}>
-          {isLowStock ? `Only ${product.stock} left!` : 'In Stock'}
-        </div>
       </div>
 
       <Card.Actions>
-        <Button fullWidth onClick={() => addToCart(product)}>
-          Add to Cart
-        </Button>
+        <div className={styles.actionsContent}>
+          <div className={isLowStock ? styles.lowStock : styles.stock}>
+            {isLowStock ? `Only ${product.stock} left!` : 'In Stock'}
+          </div>
+          <Button onClick={() => addToCart(product)}>
+            Add to Cart
+          </Button>
+        </div>
       </Card.Actions>
     </Card>
   );
