@@ -1,7 +1,6 @@
 import { describe, it, expect, vi } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import { ProductDetail } from '../index';
-import type { Product } from '../../../types/product';
 
 // Mock all child components to isolate ProductDetail behavior
 vi.mock('../../ProductNavigation', () => ({

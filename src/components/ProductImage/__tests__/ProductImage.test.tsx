@@ -37,7 +37,7 @@ describe('ProductImage Component - Behavior Tests', () => {
         isLoading: false,
         isError: false,
         error: null,
-      } as any);
+      } as unknown as ReturnType<typeof useProduct>);
 
       render(<ProductImage />);
 
@@ -53,7 +53,7 @@ describe('ProductImage Component - Behavior Tests', () => {
         isLoading: false,
         isError: false,
         error: null,
-      } as any);
+      } as unknown as ReturnType<typeof useProduct>);
 
       render(<ProductImage />);
 
@@ -68,7 +68,7 @@ describe('ProductImage Component - Behavior Tests', () => {
         isLoading: false,
         isError: false,
         error: null,
-      } as any);
+      } as unknown as ReturnType<typeof useProduct>);
 
       render(<ProductImage />);
 
@@ -84,7 +84,7 @@ describe('ProductImage Component - Behavior Tests', () => {
         isLoading: true,
         isError: false,
         error: null,
-      } as any);
+      } as unknown as ReturnType<typeof useProduct>);
 
       const { container } = render(<ProductImage />);
 
@@ -100,7 +100,7 @@ describe('ProductImage Component - Behavior Tests', () => {
         isLoading: false,
         isError: true,
         error: new Error('Failed to load product'),
-      } as any);
+      } as unknown as ReturnType<typeof useProduct>);
 
       const { container } = render(<ProductImage />);
 
@@ -116,7 +116,7 @@ describe('ProductImage Component - Behavior Tests', () => {
         isLoading: false,
         isError: false,
         error: null,
-      } as any);
+      } as unknown as ReturnType<typeof useProduct>);
 
       const { container } = render(<ProductImage />);
 
@@ -128,12 +128,12 @@ describe('ProductImage Component - Behavior Tests', () => {
       vi.mocked(useProduct).mockReturnValue({
         data: {
           ...mockProduct,
-          images: undefined as any,
+          images: undefined as unknown as string[],
         },
         isLoading: false,
         isError: false,
         error: null,
-      } as any);
+      } as unknown as ReturnType<typeof useProduct>);
 
       const { container } = render(<ProductImage />);
 
@@ -148,12 +148,12 @@ describe('ProductImage Component - Behavior Tests', () => {
         data: {
           ...mockProduct,
           images: [],
-          thumbnail: undefined as any,
+          thumbnail: undefined as unknown as string,
         },
         isLoading: false,
         isError: false,
         error: null,
-      } as any);
+      } as unknown as ReturnType<typeof useProduct>);
 
       const { container } = render(<ProductImage />);
 
