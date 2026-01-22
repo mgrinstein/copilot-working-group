@@ -21,7 +21,7 @@ export const ProductMeta = () => {
       <div className={styles.metaItem}>
         <span className={styles.metaLabel}>Rating</span>
         <span className={styles.metaValue}>
-          ⭐ {product?.rating.toFixed(1)}
+          ⭐ {product?.rating?.toFixed(1)}
         </span>
       </div>
     </div>
